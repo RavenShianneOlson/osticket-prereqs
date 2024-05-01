@@ -31,13 +31,13 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - **HeidiSQL**: Optional but recommended for managing MySQL databases.
 
 
-
-
 # Gear Up! A Step-by-Step Guide to Installing osTicket
 
 Get ready to conquer the world of help desk systems! This guide will be your trusty companion as we walk through setting up osTicket on your Windows 10 machine. Let's dive in!
 
 ## Step 1: Enabling the Essentials
+
+![17792662_10208975450568828_1303135244_n_1606596776018594](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/e21efa5c-d941-4498-a01a-8e54b626e4a9)
 
 First things first, we need to activate some key features in your Control Panel. Think of them as the building blocks for your awesome new help desk! Here's how to unlock their power:
 
@@ -48,12 +48,19 @@ First things first, we need to activate some key features in your Control Panel.
 5. Check the box next to "CGI" and head over to "Common HTTP Features."
 6. Make sure all the boxes here are checked for maximum functionality.
 
+![IISinstall](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/9b5d3b92-d7d8-4450-bd9e-b79de3e6d546)
+
+
 ### Success Check!
 
 Let's see if everything worked as planned. Open your web browser and type in "localhost" in the address bar. Hit enter, and if you see a webpage titled "Internet Information Services," you're golden!
 
+![Screenshot 2024-04-22 at 12 47 14 AM](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/62652352-96fe-4209-8ca7-4b29c52d8131)
+
+
 ## Step 2: Creating a PHP Playground
 
+Download PHP Manager and follow the prompts.
 Now, let's create a dedicated space for PHP to work its magic. We'll make a new folder on your C drive just for it, following these simple steps:
 
 1. Open your Downloads folder.
@@ -81,6 +88,9 @@ Here comes the brain of your help desk! We'll set up a MySQL server to store all
 10. You won't be prompted for a username, but it will be "root" by default.
 11. Click "Execute" and "Finish" once the installation is complete.
 
+![MySQL](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/6d099a55-3e93-4467-a7c9-fff5feee9303)
+
+
 ## Step 5: Configuring PHP in IIS
 
 This step involves introducing IIS (your web server) to PHP. We'll use a handy tool called PHP Manager to make things smooth. Here's how to get it done:
@@ -90,6 +100,8 @@ This step involves introducing IIS (your web server) to PHP. We'll use a handy t
 3. Click "Register New PHP Version."
 4. Use the "Browse" button to navigate to the "PHP" folder we created on your C drive in Step 2.
 5. Within the folder, locate the file named "php-cgi" and select it.
+
+![phpmanagerregistration](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/f3cd1796-b0f5-4383-ad78-27e105de86fc)
 
 **Important Note:** If you don't see the file, make sure the dropdown menu above the "Open" and "Cancel" buttons says "PHP executable."
 
