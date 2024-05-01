@@ -68,9 +68,21 @@ Now, let's create a dedicated space for PHP to work its magic. We'll make a new 
 3. Right-click anywhere in the blank space and select "New Folder."
 4. Name the new folder "PHP" – clear and concise!
 
-## Step 3: Downloading Microsoft Visual C++ (Optional but Important)
+### 1. Unpacking PHPManager:
+- When you've downloaded PHPManager, you'll find a zip file named `php-7.3.8-nts-Win32-VC15-x86`. Let's start by extracting this file into the PHP folder we created in your `(C:)` drive.
+  - Right-click on the zip file and select "Extract All."
+  - Click "Browse" and navigate to `This PC > Windows (C:)` drive > `PHP` folder.
+  - Select the `PHP` folder and click "Select Folder."
+  - Finally, click "Extract." Alternatively, you can simply type `(C:)PHP` instead of browsing.
 
-This little helper program might be needed down the line, so let's grab it just in case. Head over to [Microsoft's website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) and download the appropriate version for your system.
+![phpzipextractiontocdrive](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/0d9e3f94-a170-4f98-b38f-cfb8100bf06c)
+
+
+## Step 3: Downloading Microsoft Visual C++ 
+
+Head over to [Microsoft's website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) and download the appropriate version for your system.
+
+![Screenshot 2024-04-22 at 12 30 54 AM](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/10471c5e-6658-4148-a79a-e55ffea611c4)
 
 ## Step 4: Installing Your Database (MySQL Server)
 
@@ -108,3 +120,39 @@ This step involves introducing IIS (your web server) to PHP. We'll use a handy t
 ### Let's Restart!
 
 While still within IIS, select the server name in the top left corner under "Connections." Navigate to the upper right-hand section under "Actions" and select "Manage Server" followed by "Restart." This ensures the changes we just made take effect.
+
+![osticketresartinphpmanageraftermakingchanges](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/2bf9590d-1dd6-4b6e-8f88-1f6db3621cec)
+
+### Setting Up osTicket:
+- Download osTicket and extract the upload folder into `c:\inetpub\wwwroot`, which is like our web server's main folder. Drag and drop the upload folder into the `wwwroot` folder, rename it to `osTicket`, and restart the server.
+
+![uploadfileosticketdownloadtoroot](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/cf7d69e6-1fee-49f1-ac05-f68185df6c56)
+![17793073_1465468860149999_221714120_n_1606596992685239](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/b206b399-9392-4439-b91f-8575e5a42654)
+
+### Get it? *ROOT* Hehe.
+
+### Enabling Extensions in osTicket:
+- Open IIS and click on osTicket. Browse *80* to open the osTicket Installer webpage. Enable extensions like `php_imap.dll`, `php_intl.dll`, and `php_opcache.dll` in PHP Manager. Refresh osTicket in your browser to see the changes.
+
+![enablingosticketextensionsusingphpmanager](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/a3d24a78-f627-4519-bb66-e7dd1240d715)
+
+
+### Adjusting File Permissions:
+- Rename `ost-sampleconfig.php` to `ost-config.php` in the `include` folder of `wwwroot`. Change permissions to allow full control for everyone to the `ost-config.php` file temporarily.
+
+![sampleconfigandpermissions](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/db72c09f-7569-4300-a273-c3ea5424d909)
+
+### Setting Up Admin Account:
+- Continue in your browser, setting up your admin account. When prompted for database settings, we'll need to install HeidiSQL.
+
+### Installing HeidiSQL:
+- Download and install HeidiSQL, then create a new connection to the database using your MySQL username and password. Create a database named `osTicket`.
+
+### Cleanup Time:
+    - Delete the `setup` folder in `osTicket` and adjust permissions for the `most-config.php` file to ensure security.
+
+Congratulations! You've completed the official installation of osTicket. Enjoy using your new system!
+
+
+
+![64430779_2253507988051928_3751146903576772608_n_2671266812940933](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/f8062436-aa4f-4408-8c53-b63aff30dc0a)
