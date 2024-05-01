@@ -148,11 +148,11 @@ While still within IIS, select the server name in the top left corner under "Con
 ### Installing HeidiSQL:
 - Download and install HeidiSQL, then create a new connection to the database using your MySQL username and password. Create a database named `osTicket`.
 
+![ezgif com-speed](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/40eb2dad-cea5-4ea9-a7c9-ec3d5272c6b2)
+
 ### Cleanup Time:
-    - Delete the `setup` folder in `osTicket` and adjust permissions for the `most-config.php` file to ensure security.
+  - Delete the `setup` folder in `osTicket` and adjust permissions for the `most-config.php` file to ensure security.
 
 Congratulations! You've completed the official installation of osTicket. Enjoy using your new system!
-
-
 
 ![64430779_2253507988051928_3751146903576772608_n_2671266812940933](https://github.com/RavenShianneOlson/osticket-prereqs/assets/167585242/f8062436-aa4f-4408-8c53-b63aff30dc0a)
